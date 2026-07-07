@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Jua&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Gaegu", "Inter", sans-serif;
+  --font-cute: "Gaegu", cursive;
+  --font-title: "Jua", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: #FFFBEB; /* Professional Polish Cream Warm Background */
+    color: #5D4037; /* Professional Polish Rich Soft Dark Brown Text */
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom animations */
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(8px) rotate(-1deg); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-reverse 6s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar for cute look */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fdfaf2;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #fcd34d;
+  border-radius: 999px;
+  border: 2px solid #fdfaf2;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fbbf24;
+}
+
